@@ -1,0 +1,49 @@
+<mat-dialog-content>
+  <!--
+  <div>
+    {{ student | json }}
+  </div>
+  -->
+  <div fxLayout="column" fxLayoutAlign="center stretch" class="container">
+    <div>
+      <div class="img" [style.background-image]="url()">
+      </div>
+    </div>
+    <div class="name"> {{ student.n }} </div>
+    <div class="roll"> ({{ student.i }}) </div>
+    <div class="dept">{{ student.p }}, {{ student.d }}</div>
+    <div class="info">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon class="right-margin">account_balance</mat-icon>
+        <span fxFlex="">
+          {{ student.r + ", " + student.h }}
+        </span>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon class="right-margin">home</mat-icon>
+        <span fxFlex="">
+          {{ student.a }}
+        </span>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon class="right-margin">invert_colors</mat-icon>
+        <span fxFlex="">
+          {{ student.b }}
+        </span>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon class="right-margin">mail</mat-icon>
+        <a fxFlex="" [href]="'mailto:' + student.u + '@iitk.ac.in'"> {{ student.u }}@iitk.ac.in </a>
+      </div>
+    </div>
+    <div>
+      <span fxFlex="" class="text-center">
+        <a mat-button	[href]="'http://home.iitk.ac.in/~' + student.u">
+          <mat-icon>public</mat-icon>
+          <br>
+          <span> Homepage </span>
+        </a>
+      </span>
+    </div>
+  </div>
+</mat-dialog-content>
