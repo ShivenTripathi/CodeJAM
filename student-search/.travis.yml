@@ -1,9 +1,0 @@
-language: node
-
-before_install:
-- npm install -g yarn @angular/cli
-
-install:
-  - cd frontend && yarn install && cd ..
-
-script: ./scripts/run-ci.sh
